@@ -1,0 +1,1 @@
+export const UNSPLASH_API_IMAGE_URL = "https://source.unsplash.com/random"
