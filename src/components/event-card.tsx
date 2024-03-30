@@ -1,7 +1,7 @@
 "use client";
 
 import { UNSPLASH_API_IMAGE_URL } from "@/constants/query";
-import { EventoEvent } from "@/lib/type";
+import { EventoEvent } from "@prisma/client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

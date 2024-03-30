@@ -1,6 +1,6 @@
 import H1 from "@/components/h1";
 import { UNSPLASH_API_IMAGE_URL } from "@/constants/query";
-import { EventoEvent } from "@/lib/type";
+import { EventoEvent } from "@prisma/client";
 import { getEvent } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -89,15 +89,15 @@ type SectionProps = {
 	children: ReactNode;
 };
 
-export const Section = ({ children }: SectionProps) => {
+const Section = ({ children }: SectionProps) => {
 	return <section className="mb-12">{children}</section>;
 };
 
-export const SectionHeading = ({ children }: SectionProps) => {
+const SectionHeading = ({ children }: SectionProps) => {
 	return <h2 className="text-2xl mb-8">{children}</h2>;
 };
 
-export const SectionContent = ({ children }: SectionProps) => {
+const SectionContent = ({ children }: SectionProps) => {
 	return (
 		<p className="max-w-4xl mx-auto text-lg leading-8 text-white/75">
 			{children}
