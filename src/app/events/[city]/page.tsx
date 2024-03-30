@@ -29,7 +29,6 @@ const pageNumberSchema = z.coerce.number().int().positive().optional();
 export default async function Page({ params, searchParams }: EventsPageProps) {
 	const { city } = params;
 	const parsePage = pageNumberSchema.safeParse(searchParams.page);
-	console.log("🚀 ~ Page ~ page:", parsePage);
 
 	if (!parsePage.success) {
 		throw new Error("Invalid page number");
